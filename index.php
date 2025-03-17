@@ -47,6 +47,9 @@ try {
     }  elseif ($url === 'supervisor/dashboard/sesiones') {
         include __DIR__ . '/views/supervisor/sesiones.php';
     } 
+    elseif ($url === 'supervisor/dashboard/reporte') {
+        include __DIR__ . '/views/supervisor/reporte.php';
+    } 
     elseif (strpos($url, 'admin/dashboard') === 0) {
         // Asegúrate de que la ruta de clase coincida exactamente con tu namespace y estructura
         $adminDashboardController = new Controllers\Admin\DashboardController();

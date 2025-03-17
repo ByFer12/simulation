@@ -11,8 +11,8 @@
             <ul>
             <li><a href="/Proyectos/simulacionTrafico/?url=supervisor/dashboard">Inicio</a></li>
                 <li><a href="/Proyectos/simulacionTrafico/?url=supervisor/dashboard/simulaciones">Monitoreo de Simulación</a></li>
-                <li><a href="/Proyectos/simulacionTrafico/?url=supervisor/dashboard/sesiones">Gestión de Semáforos</a></li>
-                <li><a href="#">Reportes de Monitores</a></li>
+                <li><a href="/Proyectos/simulacionTrafico/?url=supervisor/dashboard/sesiones"> Sesiones</a></li>
+                <li><a href="/Proyectos/simulacionTrafico/?url=supervisor/dashboard/reporte">Reportes de Monitores</a></li>
             </ul>
             <div class="logout-button">
                 <a href="/Proyectos/simulacionTrafico/logout" class="btn-logout">Cerrar Sesión</a>
