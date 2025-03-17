@@ -1,0 +1,290 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.dashboard-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-nav h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.dashboard-nav h3 span {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-icon {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.dashboard-nav ul li {
+    margin-bottom: 10px;
+}
+
+.dashboard-nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-nav ul li a:hover {
+    background-color: #555;
+}
+
+.logout-button {
+    margin-top: auto;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.btn-logout {
+    display: block;
+    background-color: #d9534f;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c9302c;
+}
+
+.dashboard-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-area {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+
+}
+
+.simulation-area {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    flex-grow: 2; /* Ocupa más espacio */
+}
+
+.simulation-canvas-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* Asegura que el borde del canvas se respete */
+}
+
+#simulationCanvas {
+    display: block; /* Evita espacios extra debajo del canvas */
+    width: 100%; /* Hace que el canvas sea responsivo dentro de su contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+
+.controls-area {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 400px; /* Ancho fijo para la columna de controles */
+}
+
+.controls-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.simulation-buttons{
+    margin-left: 750px;
+    margin-bottom: 5px;
+}
+.simulation-buttons button {
+    background-color: #28a745; /* Verde para Iniciar */
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.simulation-buttons button:hover {
+    background-color: #218838;
+}
+
+.simulation-buttons button.disabled {
+    background-color: #6c757d; /* Gris para Desactivado */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.simulation-buttons button.disabled:hover {
+    background-color: #6c757d;
+}
+
+.simulation-buttons button.active {
+    opacity: 1;
+}
+
+.control-item {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.control-item h3 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.semaphore-controls {
+    margin-top: 10px;
+}
+
+.semaphore-controls label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#seleccionarSemaforo {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.modify-semaphore-inputs .time-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.modify-semaphore-inputs .time-input label {
+    width: 80px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.modify-semaphore-inputs .time-input input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.modify-semaphore-inputs .time-input span {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.modify-semaphore-inputs .modify-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modify-semaphore-inputs .modify-input label {
+    width: 120px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.modify-semaphore-inputs .modify-input input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.modify-semaphore-inputs .modify-input button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.modify-semaphore-inputs .modify-input button:hover {
+    background-color: #0056b3;
+}
+
+.dashboard-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.session-timer {
+    font-size: 0.9em;
+}

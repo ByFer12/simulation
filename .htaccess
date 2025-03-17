@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /Proyectos/simulacionTrafico/
+
+    # 1) Si la URL empieza por /Proyectos/simulacionTrafico/img/, NO reescribas
+    RewriteCond %{REQUEST_URI} ^/Proyectos/simulacionTrafico/img/ [NC]
+    RewriteRule . - [L]
+
+    # 2) El resto de peticiones pasa por index.php si no existe el archivo
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?url=$1 [L]
+</IfModule>
